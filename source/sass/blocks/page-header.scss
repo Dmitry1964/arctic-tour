@@ -13,6 +13,7 @@
 .page-header__logo {
   width: calc(70px - (1366px - 100vw)/(1366 - 768)*(70 - 38));
   height: auto;
+  color: $color-white;
 }
 
 .page-header__navigation {
@@ -23,24 +24,6 @@
 
 .page-header__button {
   display: none;
-  width: 24px;
-  height: 14px;
-  border: none;
-  align-self: center;
-  position: relative;
-  background-color: transparent;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 24px;
-    height: 2px;
-    top: 6px;
-    left: 0;
-    background-color: $color-white;
-    box-shadow: 0 6px 0 0 $color-white,
-                0 -6px 0 0 $color-white;
-  }
 }
 
 .page-header__list {
@@ -86,7 +69,7 @@
   font-weight: 400;
   color: $color-white;
   margin: 0;
-  padding-top: calc(15px - (1366px - 100vw)/(1366 - 768)*(15 - 15));
+  padding-top: 15px;
   padding-left: calc(95px - (1366px - 100vw)/(1366 - 768)*95);
 }
 
@@ -117,24 +100,48 @@
     padding-top: calc(220px - (768px - 100vw)/(768 - 320)*(220 - 133));
     padding-left: 0;
   }
+
+  .page-header__slogan {
+    font-size: calc(18px - (768px - 100vw)/(768 - 320)*(18 - 16));
+    line-height: 140%;
+    padding-top: 13px;
+    padding-left: calc(95px - (1366px - 100vw)/(1366 - 768)*95);
+  }
+
 }
 
-@media (max-width: $vp-580) {
+@media (max-width: $vp-600) {
+  .page-header {
+    background-image: url(../../img/content/background-head2.jpg);
+  }
+
   .page-header__list {
     display: none;
   }
 
-  .page-header__button {
+  .page-header__button--open {
     display: block;
+    width: 24px;
+    height: 14px;
+    border: none;
+    align-self: center;
+    position: relative;
+    background-color: transparent;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      top: 6px;
+      left: 0;
+      background-color: $color-white;
+      box-shadow: 0 6px 0 0 $color-white,
+                    0 -6px 0 0 $color-white;
+    }
   }
 
   .page-header__breake {
     display: block;
-  }
-}
-
-@media (max-width: $vp-375) {
-  .page-header {
-    background-image: url(../../img/content/background-head2.jpg);
   }
 }
