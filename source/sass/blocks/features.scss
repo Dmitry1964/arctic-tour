@@ -1,0 +1,203 @@
+.features {
+  padding-top: 110px;
+  padding-bottom: 110px;
+  background-image: url(../img/content/background-feature.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url(../img/content/background-feature@2x.jpg);
+  }
+}
+
+.features__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features__title {
+  font-size: 28px;
+  line-height: 150%;
+  font-weight: 600;
+  color: $color-dark;
+  padding-bottom: 50px;
+  margin: 0;
+}
+
+.features__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.features__item {
+  padding-left: 30px;
+  padding-right: 15px;
+  padding-top: 80px;
+  min-height: 241px;
+  background-color: $color-white;
+
+  &:first-child {
+    background-image: url(../img/svg/ship.svg);
+    background-repeat: no-repeat;
+    background-position: 30px 30px;
+  }
+
+  &:nth-child(2) {
+    background-image: url(../img/svg/okey.svg);
+    background-repeat: no-repeat;
+    background-position: 30px 35px;
+  }
+
+  &:last-child {
+    background-image: url(../img/svg/boat.svg);
+    background-repeat: no-repeat;
+    background-position: 30px 38px;
+  }
+
+  &:first-child p {
+    width: 91.42%;
+  }
+
+  &:nth-child(2) p {
+    width: 88.88%;
+  }
+
+  &:last-child p {
+    width: 76.5%;
+  }
+}
+
+.features__item h3 {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 500;
+  color: $color-dark;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.features__item p {
+  font-size: 14px;
+  line-height: 140%;
+  font-weight: 400;
+  color: $color-dark;
+  margin: 0;
+}
+
+  .features__breake {
+    display: none;
+  }
+
+@media (max-width: $vp-768) {
+  .features {
+    padding-top: 85px;
+    padding-bottom: 100px;
+    background-image: url(../img/content/background-feature1.jpg);
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url(../img/content/background-feature1@2x.jpg);
+    }
+  }
+
+  .features__title {
+    font-size: 26px;
+    line-height: 150%;
+    font-weight: 600;
+    color: $color-dark;
+    padding-bottom: 50px;
+  }
+
+    .features__list {
+      column-gap: 30px;
+
+      @include vp-767 {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+      }
+    }
+
+    .features__item {
+      padding-left: 20px;
+      padding-top: 68px;
+      min-height: 310px;
+
+      @include vp-767 {
+       min-height: 249px;
+      }
+
+      &:first-child {
+        background-image: url(../img/svg/ship1.svg);
+        background-repeat: no-repeat;
+        background-position: 20px 25px;
+      }
+
+      &:nth-child(2) {
+        background-image: url(../img/svg/okey1.svg);
+        background-repeat: no-repeat;
+        background-position: 20px 29px;
+      }
+
+      &:last-child {
+        background-image: url(../img/svg/boat1.svg);
+        background-repeat: no-repeat;
+        background-position: 20px 32px;
+      }
+
+      &:first-child p {
+        width: 90%;
+      }
+
+      &:nth-child(2) p {
+        width: 94.73%;
+      }
+
+      &:last-child p {
+        width: 97.66%;
+      }
+    }
+}
+
+@media (max-width: $vp-320) {
+  .features {
+    padding-top: 56px;
+    padding-bottom: 55px;
+    background-image: url(../img/content/background-feature2.jpg);
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url(../img/content/background-feature2@2x.jpg);
+    }
+  }
+
+  .features__title {
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: 600;
+    color: $color-dark;
+    padding-bottom: 32px;
+  }
+
+  .features__item {
+    height: 249px;
+
+    &:first-child p {
+      width: 100%;
+    }
+
+    &:nth-child(2) p {
+      width: 87.45%;
+    }
+
+    &:last-child p {
+      width: 91.37%;
+    }
+  }
+
+  .features__breake {
+    display: block;
+  }
+}
