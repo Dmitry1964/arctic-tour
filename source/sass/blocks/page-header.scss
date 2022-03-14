@@ -84,6 +84,10 @@
     background-size: cover;
     padding-top: 30px;
     height: 638px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url(../img/content/background-head1@2x.jpg);
+    }
   }
 
   .page-header__logo {

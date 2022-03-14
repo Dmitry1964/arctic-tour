@@ -1,19 +1,20 @@
 .booking {
   min-height: 555px;
-  background-image: url(../../img/content/background-form.jpg);
+  background-image: url(../img/content/background-form.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
 
   @media (min-resolution: $retina-dppx) {
-    background-image: url(../../img/content/background-form@2x.jpg);
+    background-image: url(../img/content/background-form@2x.jpg);
   }
 }
 
 .booking__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-top: 50px;
-  padding-bottom: 50px;
   height: 100%;
 
   @include vp-1023 {
@@ -39,6 +40,10 @@
   margin: 0;
   margin-top: 160px;
   margin-bottom: 10px;
+
+  @include vp-1023 {
+    margin: 0;
+  }
 }
 
 .booking__content p {
@@ -49,8 +54,9 @@
   margin: 0;
 
   @include vp-1023 {
-    width: 51.9%;
+    width: 53%;
     margin: 0 auto;
+    padding-bottom: 60px;
   }
 }
 
@@ -65,7 +71,6 @@
     margin-right: 0;
     justify-self: center;
   }
-
 }
 
 .booking__fields {
@@ -114,7 +119,7 @@
   height: 18px;
   top: -2px;
   left: 0;
-  background-image: url(../../img/content/check-ok.png);
+  background-image: url(../img/content/check-ok.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -138,4 +143,79 @@
   border: none;
   padding: 0;
   background-color: $color-white;
+}
+
+@media (max-width: $vp-768) {
+  .booking {
+    max-height: 805px;
+    background-image: url(../img/content/background-form1.jpg);
+    padding-top: 88px;
+    padding-bottom: 80px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url(../img/content/background-form1@2x.jpg);
+    }
+  }
+
+    .booking__content h2 {
+    font-size: 34px;
+    padding-bottom: 5px;
+  }
+
+  .booking__content p {
+    padding-bottom: 50px;
+  }
+
+  .booking__fields {
+      padding-top: 48px;
+  }
+
+  .booking__fields p {
+      padding-bottom: 25px;
+  }
+
+  .booking__form {
+    @include vp-767 {
+     width: 290px;
+    }
+  }
+
+  .booking__breake {
+    display: none;
+  }
+}
+
+
+@media (max-width: $vp-320) {
+  .booking {
+    padding-top: 60px;
+    padding-bottom: 69px;
+  }
+
+  .booking__content h2 {
+    font-size: 24px;
+    line-height: 130%;
+    padding-bottom: 12px;
+  }
+
+  .booking__content p {
+    font-size: 16px;
+    line-height: 140%;
+    width: 257px;
+    margin: 0 auto;
+    padding-bottom: 35px;
+  }
+
+  .booking__fields {
+    padding: 35px 30px 40px;
+  }
+
+  .booking__fields p {
+    line-height: 140%;
+    text-align: center;
+  }
+
+  .booking__checkbox {
+    margin-bottom: 25px;
+  }
 }
