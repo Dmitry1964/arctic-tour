@@ -1,0 +1,150 @@
+.contacts {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.contacts__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  @include vp-1279 {
+    column-gap: 30px;
+  }
+}
+
+.contacts__map {
+  overflow: hidden;
+  position:relative;
+  height: 306px;
+  @include vp-1279 {
+    height: 335px;
+  }
+}
+
+.contacts__map iframe {
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+
+.contacts__info {
+  padding-top: 75px;
+}
+
+.contacts__info h3 {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 500;
+  color: $color-dark;
+  padding-left: 60px;
+  margin: 0 0 32px;
+  @include vp-1279 {
+    padding-left: 30px;
+  }
+  @include vp-1023 {
+    padding-left: 0;
+  }
+}
+
+.contacts__breake {
+  display: none;
+}
+
+.contacts__info p {
+  font-size: 16px;
+  line-height: 150%;
+  color: $color-dark;
+  padding-left: 88px;
+  margin: 0;
+  margin: 0 0 25px;
+  @include vp-1279 {
+    padding-left: 58px;
+  }
+  @include vp-1023 {
+    padding-left: 28px;
+  }
+
+
+  &:first-of-type {
+    margin-bottom: 20px;
+    background-image: url(../../img/content/icon-point.png);
+    background-repeat: no-repeat;
+    background-position: 60px center;
+    // margin: 0 0 32px;
+    @include vp-1279 {
+      background-position: 30px center;
+    }
+    @include vp-1023 {
+      background-position: 0 center;
+    }
+  }
+
+  &:last-of-type {
+    background-image: url(../../img/content/icon-phone.png);
+    background-repeat: no-repeat;
+    background-position: 60px center;
+    @include vp-1279 {
+      background-position: 30px center;
+    }
+    @include vp-1023 {
+      background-position: 0 center;
+    }
+  }
+}
+
+@media (max-width: $vp-768) {
+  .contacts {
+    padding: 100px 0;
+  }
+
+  .contacts__wrapper {
+    @include vp-767 {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+.contacts__info {
+  padding-top: 68px;
+  margin-bottom: 15px;
+}
+
+  .contacts__info h3 {
+    margin-bottom: 25px;
+    padding-top: 0px;
+  }
+  .contacts__breake {
+    display: block;
+  }
+
+  .contacts__info p:first-of-type {
+    margin-bottom: 20px;
+    background-position: 0 5px;
+  }
+}
+
+@media (max-width: $vp-320) {
+  .contacts {
+    padding: 65px 0;
+  }
+
+  .contacts__info {
+    margin: 0;
+    padding: 0 0 50px;
+  }
+
+  .contacts__info h3 {
+    margin-top: -5px;
+    margin-bottom: 25px;
+  }
+
+  .contacts__info p {
+    padding-left: 26px;
+
+    &:last-of-type {
+      nargin: 0;
+    }
+  }
+}
