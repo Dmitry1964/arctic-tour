@@ -72,7 +72,6 @@
     background-image: url(../../img/content/icon-point.png);
     background-repeat: no-repeat;
     background-position: 60px center;
-    // margin: 0 0 32px;
     @include vp-1279 {
       background-position: 30px center;
     }
@@ -127,7 +126,7 @@
 
 @media (max-width: $vp-320) {
   .contacts {
-    padding: 65px 0;
+    padding: 65px 0 58px 0;
   }
 
   .contacts__info {
@@ -144,7 +143,7 @@
     padding-left: 26px;
 
     &:last-of-type {
-      nargin: 0;
+      margin: 0;
     }
   }
 }
