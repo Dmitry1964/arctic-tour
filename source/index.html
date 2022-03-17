@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Описание проекта">
+  <link rel="preload" href="css/style.min.css">
+  <link rel="preload" href="fonts/montserrat-regular.woff2"> as="font">
+  <link rel="preload" href="fonts/montserrat-regular.woff"> as="font">
   <title>Круизы в Антарктику</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -15,22 +18,22 @@
     <header class="page-header">
       <div class="page-header__wrapper container">
         <nav class="page-header__navigation page-header__navigation--mobile">
-          <svg class="page-header__logo page-header__logo--menu" width="70" height="38">
+          <svg class="page-header__logo page-header__logo--mobile" width="70" height="38">
             <use href="./img/sprite_auto.svg#logo"></use>
           </svg>
           <button class="page-header__button page-header__button--open  page-header__button--close"></button>
-          <ul class="page-header__list">
+          <ul class="page-header__list page-header__list--mobile">
             <li class="page-header__item">
-              <a class="page-header__link" href="sitemap.html">Преимущества </a>
+              <a class="page-header__link" href="#features">Преимущества </a>
             </li>
             <li class="page-header__item">
               <a class="page-header__link" href="#">Направления</a>
             </li>
             <li class="page-header__item">
-              <a class="page-header__link" href="#">Ближайшие круизы</a>
+              <a class="page-header__link" href="#catalog">Ближайшие круизы</a>
             </li>
             <li class="page-header__item">
-              <a class="page-header__link" href="#">Контакты</a>
+              <a class="page-header__link" href="#contacts">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -65,7 +68,7 @@
         </div>
       </section>
 
-      <section class="features">
+      <section id="features" class="features">
         <div class="features__wrapper container">
           <h2 class="features__title">Преимущества</h2>
           <ul class="features__list">
@@ -94,7 +97,7 @@
           </ul>
         </div>
       </section>
-      <section class="catalog">
+      <section id="catalog" class="catalog">
         <div class="catalog__wrapper container">
           <h2 class="catalog__title">Ближайшие круизы</h2>
           <ul class="catalog__list">
@@ -355,7 +358,6 @@
             </li>
           </ul>
         </div>
-
       </section>
 
       <section class="booking">
@@ -370,13 +372,15 @@
             <fieldset class="booking__fields">
               <p>Оставьте заявку и мы свяжемся с вами в&nbsp;ближайшее время</p>
               <label>
-                <input class="booking__field" type="text" name="name" id="name" placeholder="Имя">
+                <input type="text" name="name" id="name" placeholder="Имя" aria-label="Ваше имя" required>
               </label>
               <label>
-                <input class="booking__field" type="tel" name="phone" id="phone" placeholder="Телефон">
+                <input type="tel" name="phone" id="phone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                   placeholder="8 (960) 900-60-90" aria-label="Введите ваш телефон" required>
               </label>
               <label>
-                <input class="booking__field" type="email" name="imail" id="email" placeholder="Email">
+                <input type="email" name="imail" id="email"
+                pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"  placeholder="grishaewa.lera@gmail.com" aria-label="Введите ваш электронный адрес" required>
               </label>
               <div class="booking__checkbox">
                 <input class="visually-hidden" type="checkbox" name="approval" id="approval" checked>
@@ -387,7 +391,7 @@
           </form>
         </div>
       </section>
-      <section class="contacts">
+      <section id="contacts" class="contacts">
         <h2 class="visually-hidden">Мосто расположения на карте, телефон и адрес</h2>
         <div class="contacts__wrapper container">
           <div class="contacts__map">

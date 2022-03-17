@@ -4,6 +4,7 @@
   background-image: url(../img/content/background-feature.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: $color-gray;
 
   @media (min-resolution: $retina-dppx) {
     background-image: url(../img/content/background-feature@2x.jpg);

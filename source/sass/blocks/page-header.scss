@@ -2,6 +2,7 @@
   background-image: url(../img/content/background-head.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: $color-gray;
   height: 650px;
   padding-top: 35px;
 
@@ -131,7 +132,7 @@
   }
 
   .page-header__button--open {
-    display: none;
+    display: block;
     width: 24px;
     height: 14px;
     border: none;
@@ -162,9 +163,10 @@
     padding-top: 20px;
     position: relative;
     background-size: 320px 500px;
+    height: 500px;
   }
 
-  .page-header__navigation {
+  .page-header__navigation--mobile {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content 1fr;
@@ -175,10 +177,10 @@
     right: 0;
     padding: 20px 15px 15px;
     height: 568px;
-    box-shadow: -20px 0 $color-shadow;
+    box-shadow: -35px 0 $color-shadow;
     }
 
-  .page-header__logo {
+  .page-header__logo--mobile {
     width: 42px;
     color: $color-dark;
   }
@@ -214,7 +216,7 @@
       }
     }
 
-  .page-header__list {
+  .page-header__list--mobile {
     grid-column-start: 1;
     grid-column-end: -1;
     display: flex;
@@ -236,7 +238,7 @@
     color: $color-dark;
   }
 
-  .page-header__title {
+  .page-header__title{
     font-size: 36px;
     line-height: 125%;
     padding-top: 132px;
@@ -249,5 +251,4 @@
     padding-top: 12px;
     padding-left: 0;
   }
-
 }

@@ -1,5 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {headerButton} from './modules/init-menu';
+import {onHeaderButtonHendler, mobileMenuNoJs} from './modules/init-menu';
 
 // ---------------------------------
 
@@ -9,6 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  mobileMenuNoJs();
 
   // Modules
   // ---------------------------------
@@ -18,7 +21,13 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initModals();
   });
+
+  headerButton.addEventListener(('click'), () => {
+    onHeaderButtonHendler();
+  });
+
 });
+
 
 // ---------------------------------
 
