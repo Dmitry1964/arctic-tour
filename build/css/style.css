@@ -389,7 +389,7 @@ template {
   font-weight: 400;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../../fonts/montserrat-regular.woff2") format("woff2"), url("../../fonts/montserrat-regular.woff") format("woff");
+  src: url("../fonts/montserrat-regular.woff2") format("woff2"), url("../fonts/montserrat-regular.woff") format("woff");
 }
 
 @font-face {
@@ -397,7 +397,7 @@ template {
   font-weight: 500;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../../fonts/montserrat-medium.woff2") format("woff2"), url("../../fonts/montserrat-medium.woff") format("woff");
+  src: url("../fonts/montserrat-medium.woff2") format("woff2"), url("../fonts/montserrat-medium.woff") format("woff");
 }
 
 @font-face {
@@ -405,7 +405,7 @@ template {
   font-weight: 600;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../../fonts/montserrat-semibold.woff2") format("woff2"), url("../../fonts/montserrat-semibold.woff") format("woff");
+  src: url("../fonts/montserrat-semibold.woff2") format("woff2"), url("../fonts/montserrat-semibold.woff") format("woff");
 }
 
 @font-face {
@@ -413,7 +413,7 @@ template {
   font-weight: 700;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../../fonts/montserrat-bold.woff2") format("woff2"), url("../../fonts/montserrat-bold.woff") format("woff");
+  src: url("../fonts/montserrat-bold.woff2") format("woff2"), url("../fonts/montserrat-bold.woff") format("woff");
 }
 
 *,
@@ -1321,13 +1321,13 @@ button,
 
 .contacts__info p:first-of-type {
   margin-bottom: 20px;
-  background-image: url(../../img/content/icon-point.png);
+  background-image: url(../img/content/icon-point.png);
   background-repeat: no-repeat;
   background-position: 60px center;
 }
 
 .contacts__info p:last-of-type {
-  background-image: url(../../img/content/icon-phone.png);
+  background-image: url(../img/content/icon-phone.png);
   background-repeat: no-repeat;
   background-position: 60px center;
 }
@@ -2045,7 +2045,7 @@ button,
     padding-top: 65px;
     padding-bottom: 65px;
     height: 760px;
-    background-image: url(../../img/content/background-form2.jpg);
+    background-image: url(../img/content/background-form2.jpg);
   }
 
   .booking__wrapper {

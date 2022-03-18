@@ -66,10 +66,9 @@
     padding-left: 28px;
   }
 
-
   &:first-of-type {
     margin-bottom: 20px;
-    background-image: url(../../img/content/icon-point.png);
+    background-image: url(../img/content/icon-point.png);
     background-repeat: no-repeat;
     background-position: 60px center;
     @include vp-1279 {
@@ -81,7 +80,7 @@
   }
 
   &:last-of-type {
-    background-image: url(../../img/content/icon-phone.png);
+    background-image: url(../img/content/icon-phone.png);
     background-repeat: no-repeat;
     background-position: 60px center;
     @include vp-1279 {
