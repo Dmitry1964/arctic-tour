@@ -33,10 +33,6 @@
   }
 }
 
-.catalog__item {
-  // overflow: hidden;
-}
-
 .catalog__image {
   display: block;
   position: relative;
@@ -49,9 +45,13 @@
 }
 
 .catalog__image p {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 500;
   position: absolute;
   bottom: 10px;
-  left: 10px;
+  left: 30px;
+  bottom: 5px;
   color: $color-white;
 }
 
@@ -122,7 +122,8 @@
   }
 
   .catalog__item p {
-    bottom: 7%;
+    bottom: 2%;
+    left: 12%;
   }
 }
 
@@ -143,7 +144,7 @@
   }
 
   .catalog__item p {
-    bottom: 20px;
+    bottom: 0px;
     left: 25px;
   }
 

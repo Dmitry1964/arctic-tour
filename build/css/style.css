@@ -1189,9 +1189,13 @@ button,
 }
 
 .catalog__image p {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 500;
   position: absolute;
   bottom: 10px;
-  left: 10px;
+  left: 30px;
+  bottom: 5px;
   color: #f9fbfd;
 }
 
@@ -1687,7 +1691,8 @@ button,
   }
 
   .catalog__item p {
-    bottom: 7%;
+    bottom: 2%;
+    left: 12%;
   }
 
   .contacts {
@@ -2104,7 +2109,7 @@ button,
   }
 
   .catalog__item p {
-    bottom: 20px;
+    bottom: 0px;
     left: 25px;
   }
 
