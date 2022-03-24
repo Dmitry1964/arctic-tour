@@ -1,17 +1,32 @@
-
 .catalog {
-  padding-top: 120px;
+  padding-top: 105px;
   padding-bottom: 120px;
+
+  @include vp-1279 {
+    padding-top: calc(105px - (1279px - 100vw)/(1279 - 768)*(105 - 90));
+    padding-bottom: calc(120px - (1279px - 100vw)/(1279 - 768)*(120 - 100));
+  }
+}
+
+.catalog__item {
+  position: relative;
+  cursor: pointer;
+}
+
+.catalog__image img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .catalog__title {
-  font-size: 28px;
-  line-height: 150%;
-  font-weight: 600;
-  color: $color-dark;
+  @include font(28px, 150%, 600, $color-dark);
   text-align: center;
   margin: 0;
-  padding-bottom: 49px;
+  padding-bottom: 50px;
+
+  @include vp-1279 {
+    font-size: calc(28px - (1279px - 100vw)/(1279 - 768)*(28 - 26));
+  }
 }
 
 .catalog__list {
@@ -19,136 +34,113 @@
   grid-template-columns: repeat(4, 1fr);
   column-gap: 30px;
   row-gap: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
   margin: 0;
+  padding: 0 15px;
   list-style: none;
 
   @include vp-1023 {
     grid-template-columns: 1fr 1fr;
   }
 
-  @include vp-374 {
+  @include vp-767 {
     grid-template-columns: 1fr;
   }
 }
 
 .catalog__image {
-  display: block;
   position: relative;
 }
 
-.catalog__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .catalog__image p {
-  font-size: 18px;
-  line-height: 150%;
-  font-weight: 500;
+  @include font(18px, 150%, 500, $color-white);
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   left: 30px;
-  bottom: 5px;
-  color: $color-white;
-}
-
-.catalog__card {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: $color-dark;
-  height: 100%;
-  padding: 10px;
-}
-
-.catalog__item:hover .catalog__image{
-  display: none;
-}
-
-.catalog__item:hover .catalog__card {
-  display: flex;
-}
-
-.catalog__card h3 {
-  font-size: 18px;
-  line-height: 150%;
-  font-weight: 500;
-  color: $color-white;
   margin: 0;
-}
 
-.catalog__card dl {
-  flex-grow: 1;
-  margin: 0;
-}
-
-.catalog__card dt{
-  font-size: 14px;
-  line-height: 140%;
-  font-weight: 500;
-  color: $color-white;
-}
-
-.catalog__card dd {
-  font-size: 14px;
-  line-height: 140%;
-  font-weight: 400;
-  color: $color-gray;
-  margin: 0;
-}
-
-.catalog__card-link {
-  font-size: 14px;
-  line-height: 140%;
-  font-weight: 600;
-  color: $color-dark;
-  text-align: center;
-  width: 100%;
-  background-color: $color-white;
-  padding: 14px 0;
+  @include vp-1279 {
+    bottom: calc(20px - (1279px - 100vw)/(1279 - 768)*(20 - 25));
+    left: calc(30px - (1279px - 100vw)/(1279 - 768)*(30 - 35));
+  }
 }
 
 @media (max-width: $vp-768) {
   .catalog {
-    padding-top: 88px;
-    padding-bottom: 100px;
+    @include vp-767 {
+      padding-top: calc(90px - (768px - 100vw)/(768 - 320)*(90 - 55));
+      padding-bottom: calc(100px - (768px - 100vw)/(768 - 320)*(100 - 65));
+    }
   }
 
   .catalog__title {
-    font-size: 26px;
-  }
-
-  .catalog__item p {
-    bottom: 2%;
-    left: 12%;
-  }
-}
-
-@media (max-width: $vp-320) {
-  .catalog {
-    padding-top: 58px;
-    padding-bottom: 63px;
+    @include vp-767 {
+      font-size: calc(26px - (768px - 100vw)/(768 - 320)*(26 - 24));
+      padding-bottom: calc(50px - (768px - 100vw)/(768 - 320)*(50 - 30));
+    }
   }
 
   .catalog__list {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 15px;
+
+    @include vp-374 {
+      padding: 0 10px;
+    }
   }
 
-  .catalog__title {
-    font-size: 24px;
-    padding-bottom: 30px;
+  .catalog__image p {
+    @include vp-767 {
+      bottom: calc(25px - (768px - 100vw)/(768 - 320)*(25 - 15));
+      left: calc(30px - (768px - 100vw)/(768 - 320)*(30 - 25));
+    }
   }
+}
 
-  .catalog__item p {
-    bottom: 0px;
-    left: 25px;
-  }
+// Карточка круиза
 
-  .catalog__item:hover .catalog__card {
-    display: none;
-  }
+.catalog__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 30px 25px;
+  background-color: $color-dark;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  overflow: auto;
+}
+
+.catalog__item:hover .catalog__card {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.catalog__card h3 {
+  @include font(18px, 150%, 500, $color-white);
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.catalog__card dl {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.catalog__card dt {
+  @include font(14px, 140%, 500, $color-white);
+}
+
+.catalog__card dd {
+  @include font(14px, 140%, 400, $color-gray);
+  margin: 0;
+}
+
+.catalog__card-link {
+  @include font(14px, 150%, 600, $color-dark);
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  background-color: $color-white;
 }

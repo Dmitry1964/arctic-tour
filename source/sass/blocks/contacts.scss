@@ -1,6 +1,10 @@
 .contacts {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 120px 0;
+
+  @include vp-1279 {
+    padding-top: calc(120px - (1279px - 100vw)/(1279 - 768)*(120 - 90));
+    padding-bottom: calc(120px - (1279px - 100vw)/(1279 - 768)*(120 - 100));
+  }
 }
 
 .contacts__wrapper {
@@ -16,8 +20,13 @@
   overflow: hidden;
   position:relative;
   height: 306px;
+
   @include vp-1279 {
     height: 335px;
+  }
+
+  @include vp-767 {
+    height: 316px;
   }
 }
 
@@ -30,71 +39,45 @@
 }
 
 .contacts__info {
+  justify-self: right;
   padding-top: 75px;
+
+  @include vp-1279 {
+    padding-top: 73px;
+  }
 }
 
 .contacts__info h3 {
-  font-size: 18px;
-  line-height: 150%;
-  font-weight: 500;
-  color: $color-dark;
-  padding-left: 60px;
-  margin: 0 0 32px;
-  @include vp-1279 {
-    padding-left: 30px;
-  }
-  @include vp-1023 {
-    padding-left: 0;
-  }
-}
+  @include font(18px, 150%, 500, $color-dark);
+  width: 500px;
+  margin: 0 0 30px 0;
 
-.contacts__breake {
-  display: none;
+  @include vp-1279 {
+    width: calc(500px - (1279px - 100vw)/(1279 - 768)*(500 - 324));
+  }
 }
 
 .contacts__info p {
-  font-size: 16px;
-  line-height: 150%;
-  color: $color-dark;
-  padding-left: 88px;
+  @include font(16px, 150%, 400, $color-dark);
   margin: 0;
-  margin: 0 0 25px;
-  @include vp-1279 {
-    padding-left: 58px;
-  }
-  @include vp-1023 {
-    padding-left: 28px;
-  }
+  padding-left: 28px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
 
   &:first-of-type {
-    margin-bottom: 20px;
-    background-image: url(../img/content/icon-point.png);
-    background-repeat: no-repeat;
-    background-position: 60px center;
-    @include vp-1279 {
-      background-position: 30px center;
-    }
-    @include vp-1023 {
-      background-position: 0 center;
-    }
+    margin-bottom: 22px;
+    background-image: url(../../img/content/icon-point.png);
   }
 
-  &:last-of-type {
-    background-image: url(../img/content/icon-phone.png);
-    background-repeat: no-repeat;
-    background-position: 60px center;
-    @include vp-1279 {
-      background-position: 30px center;
-    }
-    @include vp-1023 {
-      background-position: 0 center;
-    }
+  &:nth-of-type(n + 2) {
+    background-image: url(../../img/content/icon-phone.png);
   }
 }
 
 @media (max-width: $vp-768) {
-  .contacts {
-    padding: 100px 0;
+.contacts {
+    padding-top: calc(90px - (768px - 100vw)/(768 - 320)*(90 - 60));
+    padding-bottom: calc(110px - (768px - 100vw)/(768 - 320)*(100 - 53));
   }
 
   .contacts__wrapper {
@@ -104,45 +87,13 @@
     }
   }
 
-.contacts__info {
-  padding-top: 68px;
-  margin-bottom: 15px;
-}
-
-  .contacts__info h3 {
-    margin-bottom: 25px;
-    padding-top: 0px;
-  }
-  .contacts__breake {
-    display: block;
-  }
-
-  .contacts__info p:first-of-type {
-    margin-bottom: 20px;
-    background-position: 0 5px;
-  }
-}
-
-@media (max-width: $vp-320) {
-  .contacts {
-    padding: 65px 0 35px 0;
-  }
-
   .contacts__info {
-    margin: 0;
-    padding: 0 0 50px;
+    padding-top: calc(73px - (768px - 100vw)/(768 - 320)*(73 - 0));
+    margin-bottom: 35px;
   }
 
   .contacts__info h3 {
-    margin-top: -5px;
-    margin-bottom: 25px;
-  }
-
-  .contacts__info p {
-    padding-left: 26px;
-
-    &:last-of-type {
-      margin: 0;
-    }
+    margin: 0 0 28px;
+    width: 100%;
   }
 }
