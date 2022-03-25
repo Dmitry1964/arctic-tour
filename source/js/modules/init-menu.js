@@ -18,4 +18,4 @@ const mobileMenuNoJs = () => {
   headerList.classList.remove('page-header__list--mobile');
 }
 
-export {headerButton, onHeaderButtonHendler, mobileMenuNoJs};
+export { headerButton, onHeaderButtonHendler, mobileMenuNoJs };
