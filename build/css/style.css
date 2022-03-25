@@ -782,6 +782,7 @@ button,
   background-size: cover;
   height: 650px;
   padding-top: 35px;
+  background-color: #2c39f2;
 }
 
 .page-header__navigation {
@@ -910,6 +911,7 @@ button,
   background-image: url(../img/content/background-feature.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #d8d8d9;
 }
 
 .features__title {
@@ -1000,6 +1002,7 @@ button,
   background-image: url(../img/content/background-form.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #2c39f2;
 }
 
 .booking__wrapper {
@@ -1224,7 +1227,7 @@ button,
   justify-content: space-between;
   height: 100%;
   width: 100%;
-  padding: 30px 25px;
+  padding: 30px 25px 35px;
   background-color: #011c40;
   position: absolute;
   top: 0;
@@ -1245,7 +1248,7 @@ button,
   line-height: 150%;
   font-weight: 500;
   color: #f9fbfd;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   margin: 0;
 }
 
@@ -1268,7 +1271,7 @@ button,
   line-height: 140%;
   font-weight: 400;
   color: #d8d8d9;
-  margin: 0;
+  margin: 0 0 14px 0;
 }
 
 .catalog__card-link {
@@ -1300,6 +1303,7 @@ button,
   overflow: hidden;
   position: relative;
   height: 306px;
+  background-color: #d8d8d9;
 }
 
 .contacts__map iframe {
@@ -1501,7 +1505,7 @@ button,
   .features {
     padding-top: calc(110px - (1279px - 100vw)/(1279 - 768)*(115 - 90));
     padding-bottom: calc(120px - (1279px - 100vw)/(1279 - 768)*(120 - 100));
-    background-image: url(../../img/content/background-feature1.jpg);
+    background-image: url(../img/content/background-feature1.jpg);
   }
 
   .features__title {
@@ -1746,6 +1750,14 @@ button,
     padding: 0 15px;
   }
 
+  .catalog__card {
+    padding: 30px 35px 35px;
+  }
+
+  .catalog__card h3 {
+    padding-bottom: 14px;
+  }
+
   .contacts {
     padding-top: calc(90px - (768px - 100vw)/(768 - 320)*(90 - 60));
     padding-bottom: calc(110px - (768px - 100vw)/(768 - 320)*(100 - 53));
@@ -1780,7 +1792,7 @@ button,
   .features {
     padding-top: calc(85px - (768px - 100vw)/(768 - 320)*(85 - 55));
     padding-bottom: calc(100px - (768px - 100vw)/(768 - 320)*(100 - 65));
-    background-image: url(../../img/content/background-feature2.jpg);
+    background-image: url(../img/content/background-feature2.jpg);
   }
 
   .features__title {
@@ -2103,6 +2115,10 @@ button,
 
   .booking {
     background-image: url(../img/content/background-form2.jpg);
+  }
+
+  .catalog__card {
+    padding: 30px 25px 35px;
   }
 }
 

@@ -4,6 +4,7 @@
   background-size: cover;
   height: 650px;
   padding-top: 35px;
+  background-color: $color-neon-blue;
 
   @include retina {
     background-image: url(../img/content/background-head@2x.jpg);
@@ -182,12 +183,6 @@
     }
   }
 
-  // .page-header__navigation {
-  //   @include vp-374 {
-  //     align-items: flex-start;
-  //   }
-  // }
-
   .page-header__logo {
     @include vp-767 {
       width: calc(38px - (678px - 100vw)/(678 - 320)*(38 - 42));
@@ -204,8 +199,6 @@
   .page-header__list {
     @include vp-374 {
       display: none;
-      // flex-direction: column;
-      // align-items: flex-end;
     }
   }
 
@@ -237,12 +230,6 @@
     }
   }
 
-  // .page-header__item:last-child {
-  //   @include vp-374 {
-  //     padding-right: 15px;
-  //   }
-  // }
-
   .page-header__title {
     font-size: calc(50px - (768px - 100vw)/(768 - 320)*(50 - 36));
     line-height: calc(61px - (768px - 100vw)/(768 - 320)*(61 - 45));
@@ -260,10 +247,6 @@
       background-image: url(../img/content/background-head2@2x.jpg);
     }
   }
-
-  // .page-header__list {
-  //   display: none;
-  // }
 
   .page-header__breake {
     display: block;

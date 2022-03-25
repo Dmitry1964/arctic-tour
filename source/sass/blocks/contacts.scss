@@ -20,6 +20,7 @@
   overflow: hidden;
   position:relative;
   height: 306px;
+  background-color: $color-gray;
 
   @include vp-1279 {
     height: 335px;

@@ -103,7 +103,7 @@
   justify-content: space-between;
   height: 100%;
   width: 100%;
-  padding: 30px 25px;
+  padding: 30px 25px 35px;
   background-color: $color-dark;
   position: absolute;
   top: 0;
@@ -119,7 +119,7 @@
 
 .catalog__card h3 {
   @include font(18px, 150%, 500, $color-white);
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   margin: 0;
 }
 
@@ -134,7 +134,7 @@
 
 .catalog__card dd {
   @include font(14px, 140%, 400, $color-gray);
-  margin: 0;
+  margin: 0 0 14px 0;
 }
 
 .catalog__card-link {
@@ -143,4 +143,20 @@
   padding: 10px 0;
   text-align: center;
   background-color: $color-white;
+}
+
+@media (max-width: $vp-768) {
+  .catalog__card {
+    padding: 30px 35px 35px;
+  }
+
+  .catalog__card h3 {
+    padding-bottom: 14px;
+  }
+}
+
+@media (max-width: $vp-320) {
+  .catalog__card {
+    padding: 30px 25px 35px;
+  }
 }

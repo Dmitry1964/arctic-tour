@@ -3,6 +3,7 @@
   background-image: url(../img/content/background-feature.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: $color-gray;
 
   @include retina {
     background-image: url(../img/content/background-feature@2x.jpg);
@@ -11,7 +12,7 @@
   @include vp-1279 {
     padding-top: calc(110px - (1279px - 100vw)/(1279 - 768)*(115 - 90));
     padding-bottom: calc(120px - (1279px - 100vw)/(1279 - 768)*(120 - 100));
-    background-image: url(../../img/content/background-feature1.jpg);
+    background-image: url(../img/content/background-feature1.jpg);
   }
 }
 
@@ -132,7 +133,7 @@
   @include vp-767 {
     padding-top: calc(85px - (768px - 100vw)/(768 - 320)*(85 - 55));
     padding-bottom: calc(100px - (768px - 100vw)/(768 - 320)*(100 - 65));
-    background-image: url(../../img/content/background-feature2.jpg);
+    background-image: url(../img/content/background-feature2.jpg);
   }
 }
 

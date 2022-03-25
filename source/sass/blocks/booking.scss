@@ -3,6 +3,7 @@
   background-image: url(../img/content/background-form.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: $color-neon-blue;
 
   @include retina {
     background-image: url(../img/content/background-form@2x.jpg);
