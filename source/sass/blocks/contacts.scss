@@ -65,14 +65,18 @@
   background-repeat: no-repeat;
   background-position: 0 0;
 
-  &:first-of-type {
+  &:nth-of-type(2n+1) {
     margin-bottom: 22px;
     background-image: url(../../img/content/icon-point.png);
   }
 
-  &:nth-of-type(n + 2) {
+  &:nth-of-type(2n+2) {
     background-image: url(../../img/content/icon-phone.png);
   }
+}
+
+.contacts__info a:hover {
+  color: $color-gray;
 }
 
 @media (max-width: $vp-768) {

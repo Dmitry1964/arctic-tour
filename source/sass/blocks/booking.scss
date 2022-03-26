@@ -107,6 +107,8 @@
   @include font(10px, 130%, 400, $color-white);
   vertical-align: middle;
   padding-left: 22px;
+  cursor: pointer;
+  user-select: none;
 }
 
 .booking__checkbox {
@@ -142,6 +144,11 @@
   background-color: $color-white;
   padding: 12px 0;
   border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-dark-70;
+  }
 }
 
 .booking__breake {

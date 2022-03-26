@@ -1,8 +1,7 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
-import {headerButton} from './modules/init-menu';
-import {onHeaderButtonHendler, mobileMenuNoJs} from './modules/init-menu';
-
+import { iosVhFix } from './utils/ios-vh-fix';
+import { initModals } from './modules/modals/init-modals';
+import { headerButton, headerList, pageHeader } from './modules/init-menu';
+import { onHeaderButtonHendler, mobileMenuNoJs, onHeaderLinkHendler } from './modules/init-menu';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -22,13 +21,16 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
   });
 
-  headerButton.addEventListener(('click'), () => {
-    onHeaderButtonHendler();
+  pageHeader.addEventListener(('click'), (evt) => {
+    if (evt.target === headerButton) {
+      onHeaderButtonHendler();
+    } else { onHeaderLinkHendler(); }
+  });
+  headerList.addEventListener(('click'), () => {
+    onHeaderLinkHendler();
   });
 
 });
-
-
 // ---------------------------------
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.

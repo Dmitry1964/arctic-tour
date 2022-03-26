@@ -14,7 +14,7 @@
 
 .footer__navigation {
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   justify-content: space-between;
   flex-grow: 1;
 }
@@ -60,11 +60,15 @@
     font-size: calc(16px - (1279px - 100vw)/(1279 - 768)*(16 - 12));
     line-height: calc(20px - (1279px - 100vw)/(1279 - 768)*(20 - 15));
   }
+
+  &:hover {
+    color: $color-gray;
+  }
 }
 
 .footer__social {
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   list-style: none;
   align-items: center;
   margin: 0;
@@ -87,6 +91,14 @@
   @include vp-1279 {
     width: 16px;
   }
+}
+
+.footer__social path {
+  color: $color-white;
+}
+
+.footer__social svg:hover path {
+  color: $color-gray;
 }
 
 @media (max-width: $vp-768) {

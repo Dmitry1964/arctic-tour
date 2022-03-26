@@ -22,6 +22,7 @@
   justify-content: space-between;
   align-items: center;
 
+
   @include vp-374 {
     &--mobile {
       display: grid;
@@ -29,12 +30,27 @@
       grid-template-rows: min-content 1fr;
       width: 285px;
       background-color: $color-white;
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       padding: 20px 15px 15px;
       height: 568px;
       box-shadow: -89px 0 $color-shadow;
+      z-index: 10;
+    }
+
+    &--nojs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: min-content 1fr;
+      width: 285px;
+      background-color: $color-white;
+      position: static;
+      padding: 20px 15px 15px;
+      margin: 0 auto;
+      height: 280px;
+      box-shadow: -89px 0 $color-shadow;
+      z-index: 10;
     }
   }
 }
@@ -50,6 +66,7 @@
 
 .page-header__button {
   display: none;
+  cursor: pointer;
 
   @include vp-374 {
 
@@ -137,6 +154,10 @@
     font-size: calc(16px - (1279px - 100vw)/(1279 - 768)*(16 - 14));
     line-height: calc(20px - (1279px - 100vw)/(1279 - 768)*(20 - 17))
   }
+
+  &:hover {
+    color: $color-gray;
+  }
 }
 
 .page-header__title {
@@ -151,6 +172,12 @@
     padding-top: calc(195px - (1279px - 100vw)/(1279 - 768)*(195 - 215));
     padding-bottom: calc(15px - (1279px - 100vw)/(1279 - 768)*(15 - 10));
    }
+}
+
+.page-header__title--nojs {
+  @include vp-374 {
+    padding-top: 20px;
+  }
 }
 
 .page-header__slogan {

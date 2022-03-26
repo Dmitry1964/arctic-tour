@@ -32,6 +32,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 40px;
+  row-gap: 40px;
   justify-content: space-between;
   list-style: none;
   margin: 0;
@@ -55,7 +56,7 @@
     padding-top: calc(80px - (1279px - 100vw)/(1279 - 768)*(80 - 70));
   }
 
-  &:first-child {
+  &:nth-child(3n+1) {
     background-image: url(../img/svg/ship.svg);
     background-position-y: 30px;
 
@@ -74,7 +75,7 @@
     }
   }
 
-  &:nth-child(2n) {
+  &:nth-child(3n+2) {
     background-image: url(../img/svg/okey.svg);
     background-position-y: 35px;
 
@@ -93,7 +94,7 @@
     }
   }
 
-  &:last-child {
+  &:nth-child(3n+3) {
     background-image: url(../img/svg/boat.svg);
     background-position-y: 38px;
 
