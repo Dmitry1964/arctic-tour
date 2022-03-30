@@ -1857,6 +1857,11 @@ button,
     width: calc(38px - (678px - 100vw)/(678 - 320)*(38 - 42));
   }
 
+  .page-header__logo--mobile {
+    width: 42px;
+    color: #011c40;
+  }
+
   .page-header__list {
     display: none;
   }
@@ -2023,11 +2028,6 @@ button,
 }
 
 @media (max-width: 768px) and (max-width: 374px) {
-  .page-header__logo--mobile {
-    width: 42px;
-    color: #011c40;
-  }
-
   .booking__fields p {
     text-align: center;
   }
@@ -2064,13 +2064,13 @@ button,
     -ms-grid-rows: min-content 1fr;
     grid-template-rows: -webkit-min-content 1fr;
     grid-template-rows: min-content 1fr;
-    width: 285px;
+    width: calc(678px - (767px - 100vw)/(767 - 320)*(678 - 285));
     background-color: #f9fbfd;
     position: fixed;
     top: 0;
     right: 0;
     padding: 20px 15px 15px;
-    height: 568px;
+    height: calc(638px - (767px - 100vw)/(767 - 320)*(638 - 500));
     -webkit-box-shadow: -89px 0 rgba(0, 43, 102, 0.5);
     box-shadow: -89px 0 rgba(0, 43, 102, 0.5);
     z-index: 10;

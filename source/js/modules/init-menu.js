@@ -5,7 +5,7 @@ const headerLogo = headerNavigation.querySelector('.page-header__logo');
 const headerButton = headerNavigation.querySelector('.page-header__button');
 const headerList = headerNavigation.querySelector('.page-header__list');
 const headerTitle = document.querySelector('.page-header__title');
-const headerLink = headerNavigation.querySelectorAll('.page-header__link');
+const pageMain = document.querySelector('.page-main');
 
 const onHeaderButtonHendler = () => {
   headerNavigation.classList.toggle('page-header__navigation--mobile');
@@ -13,6 +13,7 @@ const onHeaderButtonHendler = () => {
   headerButton.classList.toggle('page-header__button--close');
   headerList.classList.toggle('page-header__list--mobile');
   pageBody.classList.toggle('wrapper-fixed');
+  pageMain.classList.toggle('page-main__wrapper');
 };
 
 const mobileMenuNoJs = () => {
@@ -33,5 +34,6 @@ const onHeaderLinkHendler = () => {
   headerLogo.classList.remove('page-header__logo--mobile');
   headerButton.classList.remove('page-header__button--close');
   headerList.classList.remove('page-header__list--mobile');
+  pageMain.classList.remove('page-main__wrapper');
 };
 export { headerButton, headerList, pageHeader, onHeaderButtonHendler, mobileMenuNoJs, onHeaderLinkHendler };
