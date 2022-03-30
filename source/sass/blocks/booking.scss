@@ -127,6 +127,11 @@
   background-color: $color-white;
 }
 
+.booking__checkbox input:focus+label {
+  outline: 1px solid $color-white;
+  outline-offset: 1px;
+}
+
 .booking__checkbox input:checked+label::before {
   content: "";
   position: absolute;

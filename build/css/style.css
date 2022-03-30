@@ -1148,6 +1148,11 @@ button,
   background-color: #f9fbfd;
 }
 
+.booking__checkbox input:focus + label {
+  outline: 1px solid #f9fbfd;
+  outline-offset: 1px;
+}
+
 .booking__checkbox input:checked + label::before {
   content: "";
   position: absolute;
