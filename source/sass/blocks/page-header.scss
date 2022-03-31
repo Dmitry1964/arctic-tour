@@ -33,7 +33,8 @@
       top: 0;
       right: 0;
       padding: 20px 15px 15px;
-      height: calc(638px - (767px - 100vw)/(767 - 320)*(638 - 500));
+      height: 100vh;
+      // height: calc(638px - (767px - 100vw)/(767 - 320)*(638 - 500));
       box-shadow: -89px 0 $color-background-gray;
       z-index: 10;
     }
